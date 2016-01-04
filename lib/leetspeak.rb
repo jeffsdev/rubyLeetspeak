@@ -5,6 +5,8 @@ class String
     letters.each() do |letter|
       if (letter == "e")
         new_letters.push("3")
+      elsif (letter == "o")
+        new_letters.push("0")
       else
         new_letters.push(letter)
       end
