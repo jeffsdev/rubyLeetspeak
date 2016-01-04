@@ -2,11 +2,16 @@ class String
   define_method(:leet_word) do |word|
     letters = word.split(//)
     new_letters = []
-    letters.each() do |letter|
-      if (letter == "e")
+    for character_number in 0..letters.length - 1
+      letter = letters[character_number]
+      if (letter == "e" || letter == "E")
         new_letters.push("3")
-      elsif (letter == "o")
+      elsif (letter == "o" || letter == "O")
         new_letters.push("0")
+      elsif (letter == "I")
+        new_letters.push("1")
+      elsif (letter == "s" || letter == "S") && character_number > 0
+        new_letters.push("z")
       else
         new_letters.push(letter)
       end
